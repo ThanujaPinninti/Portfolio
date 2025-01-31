@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #1f242d; 
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: rgb(255, 0, 170);
+}
+
+html {
+    font-size: 60.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+/* Aligning the text and image */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Space between image and text */
+    flex-wrap: wrap; /* For smaller screens */
+}
+
+.home-content {
+    flex: 1; /* Take available space */
+}
+
+.home-img {
+    flex: 1; /* Take available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img img {
+    width: 300%; /* Adjust image size */
+    max-width: 700px; /* Limit maximum size */
+    border-radius: 50%; /* Circle image */
+    animation: scaleImage 3s infinite; /* Apply scaling animation */
+}
+
+/* Scaling animation */
+@keyframes scaleImage {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Style for "Download CV" button */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+    margin-top: 2rem; /* Add margin-top to push the button down */
+}
+.btn:hover{
+    box-shadow: none;
+}
+/* Define the animation */
+@keyframes scaleImage {
+    0%, 100% {
+        transform: scale(1); /* Original size */
+    }
+    50% {
+        transform: scale(1.2); /* Scaled-up size */
+    }
+}
+
+.home-content h4 {
+    font-size: 2cqw;
+    font-weight: 700;
+}
+.home-content h4:nth-of-type(2){
+    margin-bottom: 2rem;
+
+}
+span{
+    color: var(--main-color);
+}
+
+/* Wave Animation */
+@keyframes waveEffect {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    75% {
+        transform: translateY(10px);
+    }
+}
+
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    background: linear-gradient(to right, #e5ff00, #ff005e, #e5ff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block; /* Ensure the name behaves as a block for animation */
+    animation: waveEffect 2s ease-in-out infinite; /* Apply animation */
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+.Social-media {
+    display: flex; /* Arrange icons horizontally */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 20px; /* Add spacing above if needed */
+    gap: 15px; /* Add spacing between icons */
+}
+
+.Social-media i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Circle size */
+    height: 40px;
+    font-size: 2rem; /* Icon size */
+    border-radius: 50%; /* Creates a circular border */
+    background-color: white; /* Circle's background color */
+    border: 2px solid; /* Border width */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.Social-media i:hover {
+    transform: scale(1.2); /* Slight zoom effect */
+    background-color: transparent; /* Keep the background color transparent */
+    border: 2px solid currentColor; /* Use the icon's color for the border */
+}
+
+.fa-facebook {
+    color: #06c1ff;
+}
+
+.fa-whatsapp {
+    color: #25D366;
+}
+
+.fa-instagram {
+    color: #e14830;
+}
+
+.fa-linkedin {
+    color: #0A66C2;
+}
+
+.fa-github {
+    color: #e41010;
+}
+
+.fa-hackerrank {
+    color: #32a85d;
+}
+
+.about{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--second-bg-color);
+}
+.about-img img{
+    width: 35vw;
+}
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+.about-content h3{
+    font-size: 2.6rem;
+}
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .details h4 {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 11px;
+  }
+  
